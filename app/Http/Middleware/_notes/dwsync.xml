@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="Authenticate.php" server="ftp.tierrasvivas.net" local="133012553118754124" remote="132913064400000000" Dst="0" />
+<file name="PreventRequestsDuringMaintenance.php" server="ftp.tierrasvivas.net" local="133012553120662696" remote="132913064400000000" Dst="0" />
+<file name="EncryptCookies.php" server="ftp.tierrasvivas.net" local="133012553121226874" remote="132913064400000000" Dst="0" />
+<file name="TrimStrings.php" server="ftp.tierrasvivas.net" local="133012553126569758" remote="132913064400000000" Dst="0" />
+<file name="RedirectIfAuthenticated.php" server="ftp.tierrasvivas.net" local="133012553126982614" remote="132913064400000000" Dst="0" />
+<file name="TrustHosts.php" server="ftp.tierrasvivas.net" local="133012553132132228" remote="132913064400000000" Dst="0" />
+<file name="TrustProxies.php" server="ftp.tierrasvivas.net" local="133012553152454323" remote="132913064400000000" Dst="0" />
+<file name="VerifyCsrfToken.php" server="ftp.tierrasvivas.net" local="133012553152517298" remote="132913064400000000" Dst="0" />
+</dwsync>

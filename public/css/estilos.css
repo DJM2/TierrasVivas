@@ -208,6 +208,20 @@ rojo {
     outline-style: none;
 }
 
+.boton-form {
+    background: #145897;
+    border-style: none;
+    border-radius: 5px;
+    color: white;
+    padding: 4px 15px;
+    transition: 0.6s;
+}
+
+.boton-form:hover {
+    background: #1a76cd;
+    transition: 0.6s;
+}
+
 .book-tours {
     background: #364757;
     padding: 10px 30px;
@@ -232,7 +246,7 @@ strong {
 }
 
 .form-index {
-    margin-top: 35%;
+    margin-top: 30%;
 }
 
 .boton-index {
@@ -292,7 +306,24 @@ strong {
     font-weight: 600;
     text-align: center;
     margin: auto;
-    margin-top: 7em;
+    margin-top: 6em;
+}
+
+#alerta {
+    font-size: 15px;
+    background: #009100c4;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+
+#boton-alerta {
+    background: #444444;
+    color: #fff;
+    border-color: transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 10px;
 }
 
 h3 {

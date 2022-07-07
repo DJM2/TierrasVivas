@@ -66,8 +66,9 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="card card-new" style="width: 18rem;">
-                        <a href="{{route('chinchero')}}">
-                            <img class="card-img-top" src="{{ asset('img/blog/thumb/pueblo-de-chinchero.webp') }}"
+                        <a href="{{ route('chinchero') }}">
+                            <img class="card-img-top"
+                                src="{{ asset('img/blog/thumb/pueblo-de-Chinchero-Cusco.webp') }}"
                                 alt="Runkurakay Perú" loading="lazy">
                         </a>
                         <div class="card-body text-center">
@@ -75,7 +76,23 @@
                             <p class="texto-blog">El antiguo pueblo de Chinchero en Cusco es uno de los más hermosos del
                                 Valle Sagrado de los Incas. Un lugar maravilloso donde aún se puede ver la cultura Inca.
                             </p>
-                            <a href="{{route('chinchero')}}" class="boton-card">Más detalles</a>
+                            <a href="{{ route('chinchero') }}" class="boton-card">Más detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-new" style="width: 18rem;">
+                        <a href="blog/km-82-camino-inca">
+                            <img class="card-img-top"
+                                src="{{ asset('img/blog/thumb/camino-inca-km-82.webp') }}" alt="Card image cap"
+                                loading="lazy">
+                        </a>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Km 82 Camino inca</h5>
+                            <p class="texto-blog">Piscaycucho esta ubicado en la ciudad del Cusco. Es el punto de
+                                inicio del classico Camino Inca de 4 dias.
+                                …</p>
+                            <a href="blog/km-82-camino-inca" class="boton-card">Más detalles</a>
                         </div>
                     </div>
                 </div>
@@ -265,25 +282,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="card card-new" style="width: 18rem;">
-                        <a href="blog/km-82-camino-inca">
-                            <img class="card-img-top"
-                                src="{{ asset('img/blog/Camino-a-lares-machu-picchu.webp') }}" alt="Card image cap"
-                                loading="lazy">
-                        </a>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Km 82 Camino inca</h5>
-                            <p class="texto-blog">Piscaycucho esta ubicado en la ciudad del Cusco. Es el punto de
-                                inicio del classico Camino Inca de 4 dias.
-                                …</p>
-                            <a href="blog/km-82-camino-inca" class="boton-card">Más detalles</a>
-                        </div>
-                    </div>
-                </div>
-
-
-
                 <div class="space"></div>
             </div>
         </div>

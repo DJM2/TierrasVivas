@@ -25,7 +25,7 @@
                     <p> Hola Tierras Vivas, Ud. acaba de recibir un nuevo mensaje desde la pagina web en español. Por
                         favor responder en la mayor brevedad posible. A continuacion los detalles del formulario:</p>
 						</center>
-                    <table class="table">
+                    <table class="table" style="text-align: left">
                         <thead>
 							<tr>
                                 <th scope="col">Tour:</th>

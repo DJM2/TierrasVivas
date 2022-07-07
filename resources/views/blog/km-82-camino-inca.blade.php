@@ -14,6 +14,7 @@
     <meta property="og:image"
         content="https://tierrasvivas.net/img/blog/phuyupatamarca-camino-inca-tour-tierras-vivas.webp" />
     <link rel="canonical" href="https://tierrasvivas.net/blog/km-82-camino-inca" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -32,14 +33,16 @@
                 <div class="col-lg-12">
                     <div class="details">
                         <div class="location">
-                            <p><a href="/">Inicio</a> / <a href="../blog-peru">Blog</a> / <a>Km 82 Camino Inca</a></p>
+                            <p><a href="/">Inicio</a> / <a href="../blog-peru">Blog</a> / <a>Km 82 Camino Inca</a>
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-8">
                     <h2 class="text-center">Camino Inca - Km82: La ruta mas popular de Peru</h2>
                     <img src="{{ asset('img/blog/phuyupatamarca-camino-inca-tour-tierras-vivas.webp') }}"
-                        alt="5 consejos para hacer camino inca" loading="lazy" width="100%"><span>Sitio arqueológico de
+                        alt="5 consejos para hacer camino inca" loading="lazy" width="100%"><span>Sitio arqueológico
+                        de
                         Phuyupatamarca, Camino Inca</span><br><br>
 
                     <p class="p-salkantay">
@@ -87,8 +90,8 @@
                             <div class="col-lg-4">
                                 <a href="">
                                     <img class="img-fluid"
-                                        src="{{ asset('img/thumb/Camino-Inca-2-Dias-Tierras-Vivas.webp') }}" alt=""
-                                        ding="lazy">
+                                        src="{{ asset('img/thumb/Camino-Inca-2-Dias-Tierras-Vivas.webp') }}"
+                                        alt="" ding="lazy">
                                 </a>
                             </div>
                             <div class="col-lg-8">
@@ -147,6 +150,9 @@
                         de aproximadamente 2 a 3 horas, para finalmente llegar a la entrada a la magnífica ciudadela
                         inca de Machu Picchu llamada Inti Punku o Puerta del Sol.
                     </p>
+                    <img src="{{ asset('img/blog/Machu-Picchu-vista-con-turistas.webp') }}" width="100%"
+                        alt="Machu Picchu con visitantes">
+                    <i>Foto: Machu Picchu con visitantes</i><br><br>
                     <h2>Otros Tours de Caminatas a Machu Picchu</h2>
                     <p class="p-salkantay">
                         Hay muchas caminatas que lo llevan a Machu Picchu, ¡pero ninguna es como el Camino Inca, la ruta
@@ -167,10 +173,15 @@
                         Arcoíris ubicada en los Andes.
                     </p>
                     <ul>
-                        <li><a href="{{route('salkantay-5-dias')}}" class="enlace-lista">Camino de Salkantay 5 días</a></li>
-                        <li><a href="{{route('salkantay-5-dias')}}" class="enlace-lista">Camino de Choquequirao</a></li>
-                        <li><a href="{{route('salkantay-5-dias')}}" class="enlace-lista">Camino de Vilcabamba</a></li>
-                        <li><a href="{{route('salkantay-5-dias')}}" class="enlace-lista">Camino Inca corto de 2 Dias/ 1 Noche</a></li>
+                        <li><a href="{{ route('salkantay-5-dias') }}" class="enlace-lista">Camino de Salkantay 5
+                                días</a></li>
+                        <li><a href="{{ route('salkantay-5-dias') }}" class="enlace-lista">Camino de Choquequirao</a>
+                        </li>
+                        <li><a href="{{ route('salkantay-5-dias') }}" class="enlace-lista">Camino de Vilcabamba</a>
+                        </li>
+                        <li><a href="{{ route('salkantay-5-dias') }}" class="enlace-lista">Camino Inca corto de 2
+                                Dias/
+                                1 Noche</a></li>
                     </ul>
 
                     <!-- ShareThis BEGIN -->
@@ -178,9 +189,8 @@
                     <div class="sharethis-inline-share-buttons"></div>
                     <div id="fb-root"></div>
                     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v13.0"
-                                        nonce="goeGVUvy"></script>
-                    <div class="fb-comments"
-                        data-href="https://www.tierrasvivas.net/blog/km-82-camino-inca"
+                        nonce="goeGVUvy"></script>
+                    <div class="fb-comments" data-href="https://www.tierrasvivas.net/blog/km-82-camino-inca"
                         data-width="100%" data-numposts="5"></div>
                     <!-- ShareThis END -->
                 </div>
@@ -224,8 +234,8 @@
                     <div class="card card-new" style="width: 18rem;">
                         <a href="turismo-mistico-en-cusco">
                             <img class="card-img-top"
-                                src="{{ asset('img/blog/thumb/Turismo-Mistico-en-Cusco.webp') }}" alt="Card image cap"
-                                loading="lazy">
+                                src="{{ asset('img/blog/thumb/Turismo-Mistico-en-Cusco.webp') }}"
+                                alt="Card image cap" loading="lazy">
                         </a>
                         <div class="card-body text-center">
                             <h5 class="card-title">Turismo Místico en Cusco</h5>
@@ -267,7 +277,8 @@
                 perdida
                 de los Incas – <strong>Machu Picchu</strong></P>
             <P class="p-banner">
-                <a href="" class="a-reserva" data-toggle="modal" data-target="#exampleModal">¡Reserva ahora!</a>
+                <a href="" class="a-reserva" data-toggle="modal" data-target="#exampleModal">¡Reserva
+                    ahora!</a>
             </P>
         </div>
     </div>

@@ -21,6 +21,15 @@
         <div class="container">
             <div class="row">
                 <h1 class="h1-destinos">
+                    @if (session()->has('flash'))
+                    <div id="alerta">
+                        <span>¡Mensaje enviado con éxito!</span>
+                        <span style="float: right">
+                            <button id="boton-alerta" onclick="fade();"><i class="icon icon-close"></i>
+                            </button>
+                        </span>
+                    </div>
+                    @endif
                     <?php $titulo = 'Laguna Humantay'; echo $titulo; ?>
                 </h1>
             </div>

@@ -40,7 +40,7 @@
             <textarea class="form-control" name="mensaje" placeholder="Escriba acá su mensaje" required></textarea>
         </div>
         <div class="form-group col-md-12 text-center">
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="boton-form">Enviar</button>
         </div>
     </form> 
 </div>

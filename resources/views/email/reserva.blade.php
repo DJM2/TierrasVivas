@@ -31,7 +31,7 @@
                     <h2>Formulario de reserva para: {{ $titulo }}</h2>
                     <h3>Precio: $<?php $precio = 250.0; echo $precio; ?></h3>
                     <br>
-                    <form>
+                    <form method="POST">
                         @csrf
                         <div class="form-row">
                             <!----------Datos de Facturación------------->

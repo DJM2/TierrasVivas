@@ -21,6 +21,16 @@
         <div class="container">
             <div class="row">
                 <h1 class="h1-destinos">
+                    @if (session()->has('flash'))
+                    <div id="alerta">
+                        <span>¡Mensaje enviado con éxito!</span>
+                        <span style="float: right">
+                            <button id="boton-alerta" onclick="fade();"><i class="icon icon-close"></i>
+                            </button>
+                        </span>
+                    </div>
+                    @endif
+                    
                     <?php
                     $titulo = 'Cusco Mágico 5 Días - 4 Noches';
                     echo $titulo;
@@ -88,9 +98,8 @@
                         <div class="row">
                             <div class="col-lg-4">
                                 <a href="../aventura/lares-trek-machu-picchu" target="_blank">
-                                    <img class="img-fluid"
-                                        src="{{ asset('img/thumb/Tours-de-aventura-peru.webp') }}" alt=""
-                                        loading="lazy">
+                                    <img class="img-fluid" src="{{ asset('img/thumb/Tours-de-aventura-peru.webp') }}"
+                                        alt="" loading="lazy">
                                 </a>
                             </div>
                             <div class="col-lg-8">
@@ -189,8 +198,8 @@
                                     aria-selected="true">Incluye
                                 </button>
                                 <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
-                                    data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
-                                    aria-selected="false">No Incluye
+                                    data-bs-target="#nav-profile" type="button" role="tab"
+                                    aria-controls="nav-profile" aria-selected="false">No Incluye
                                 </button>
                             </div>
                         </nav>
@@ -237,7 +246,7 @@
                     <div class="sharethis-inline-share-buttons"></div>
                     <div id="fb-root"></div>
                     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v13.0"
-                                        nonce="goeGVUvy"></script>
+                        nonce="goeGVUvy"></script>
                     <div class="fb-comments" data-href="https://www.tierrasvivas.net/paquetes/cusco-magico-5-dias"
                         data-width="100%" data-numposts="5"></div>
                     <!-- ShareThis END -->
@@ -325,7 +334,8 @@
                 viajes de aventura y caminata. Reserve con nosotros su proxima visita a Perú. Conoce las mejores
                 opciones en tours alrededor de <strong>Perú</strong></P>
             <P class="p-banner">
-                <a href="" class="a-reserva" data-toggle="modal" data-target="#exampleModal">¡Reserva ahora!</a>
+                <a href="" class="a-reserva" data-toggle="modal" data-target="#exampleModal">¡Reserva
+                    ahora!</a>
             </P>
         </div>
     </div>

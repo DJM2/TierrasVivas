@@ -49,7 +49,7 @@ Route::get('aventura/cachicata-a-machu-picchu', function () {return view('aventu
 Route::get('aventura/caminata-a-choquequirao-4-dias', function () {return view('aventura/caminata-a-choquequirao-4-dias');});
 Route::get('aventura/camino-inca-campamento-2-dias', function () {return view('aventura/camino-inca-campamento-2-dias');});
 Route::get('aventura/camino-inca-corto-2-dias', function () {return view('aventura/camino-inca-corto-2-dias');});
-Route::get('aventura/camino-inca-4-dias', function () {return view('aventura/camino-inca-4-dias');});
+Route::get('aventura/camino-inca-4-dias', function () {return view('aventura/camino-inca-4-dias');})->name('camino-inca-4-dias');
 Route::get('aventura/huchuy-qosqo-a-machu-picchu', function () {return view('aventura/huchuy-qosqo-a-machu-picchu');});
 Route::get('aventura/inca-jungle-a-machu-picchu', function () {return view('aventura/inca-jungle-a-machu-picchu');});
 Route::get('aventura/lares-trek-machu-picchu', function () {return view('aventura/lares-trek-machu-picchu');});
@@ -102,21 +102,28 @@ Route::post('mensaje01', function(){
     $datos=request()->all();
     Mail::send("email.book", $datos, function($message) use($datos){
         $message->from($datos['email'], $datos['name'])
-        ->to('mirandadjmdjm@gmail.com', 'DJM2')
+        ->to('info@tierrasvivas.com', 'DJM2')
         ->subject('Envio de formulario desde la página web.');
     });
     return back()->with('flash', 'Su mensaje fué enviado correctamente!');
-}) ->name('mensaje01');
+})->name('mensaje01');
 
-/* Route::post('mensaje-index', function(){ 
+Route::post('mensaje-index', function(){ 
     $datos=request()->all();
     Mail::send("email.book-index", $datos, function($message) use($datos){
         $message->from($datos['email'], $datos['nombre'])
-        ->to('mirandadjmdjm@gmail.com', 'DJM2')
+        ->to('info@tierrasvivas.com', 'DJM2')
         ->subject('Envio de formulario desde la página web.');
     });
     return back()->with('flash', 'Su mensaje fué enviado correctamente!');
-}) ->name('mensaje-index'); */
+})->name('mensaje-index');
 
-//Prueba de envio de correos
-Route::post('mensaje',  [MensajesController::class, 'store'])->name('mensaje-index');
+Route::post('mensaje-popup', function(){ 
+    $datos=request()->all();
+    Mail::send("email.popup", $datos, function($message) use($datos){
+        $message->from($datos['email'], $datos['name'])
+        ->to('info@tierrasvivas.com', 'DJM2')
+        ->subject('Envio de formulario desde la página web.');
+    });
+    return back()->with('flash', 'Su mensaje fué enviado correctamente!');
+})->name('mensaje-popup');

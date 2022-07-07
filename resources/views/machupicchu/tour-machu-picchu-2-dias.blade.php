@@ -21,10 +21,16 @@
         <div class="container">
             <div class="row">
                 <h1 class="h1-destinos">
-                    <?php
-                    $titulo = 'Tour Machu Picchu por tren 2 Días - 1 Noche';
-                    echo $titulo;
-                    ?>
+                    @if (session()->has('flash'))
+                    <div id="alerta">
+                        <span>¡Mensaje enviado con éxito!</span>
+                        <span style="float: right">
+                            <button id="boton-alerta" onclick="fade();"><i class="icon icon-close"></i>
+                            </button>
+                        </span>
+                    </div>
+                    @endif
+                    <?php $titulo = 'Tour Machu Picchu por tren 2 Días - 1 Noche'; echo $titulo; ?>
                 </h1>
             </div>
         </div>

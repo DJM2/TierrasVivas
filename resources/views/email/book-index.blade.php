@@ -21,45 +21,45 @@
                     <center>
                         <img src="{{ asset('img/Tierras-vivas-logo-email.png') }}" alt="Tierras Vivas Español"
                             width="90px">
-                        <h1 class="text-center">Solicitud de Formulario de inicio Tierras Vivas español</h1>
+                        <h1 class="text-center">Solicitud de Formulario Tierras Vivas español</h1>
                         <p>
                             Hola Tierras Vivas, Ud. acaba de recibir un nuevo mensaje desde la pagina de inicio en
                             español. Por favor responder en la mayor brevedad posible. A continuacion los detalles del
                             formulario:
                         </p>
                     </center>
-                    <table class="table">
+                    <table class="table" style="text-align: left">
                         <thead>
                             <tr>
                                 <th scope="col">Email:</th>
-                                <td>{{ $datos['email'] }}</th>
+                                <td>{{ $email }}</th>
                             </tr>
                             <tr>
                                 <th scope="col">Nombre:</th>
-                                <td>{{ $datos['nombre'] }}</th>
+                                <td>{{ $nombre }}</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <th scope="row">Fecha de Arrivo:</th>
-                                <td>{{ $datos['da']}}</td>
+                                <td>{{ $da }}</td>
                             </tr>
                             <tr>
                                 <th scope="row">Fecha de salida:</th>
-                                <td>{{ $datos['do'] }}</td>
+                                <td>{{ $do }}</td>
                             </tr>
                             </tr>
                             <tr>
                                 <th scope="row">Adultos:</th>
-                                <td>{{ $datos['adultos'] }}</td>
+                                <td>{{ $adultos }}</td>
                             </tr>
                             <tr>
                                 <th scope="row">Niños:</th>
-                                <td>{{ $datos['childs'] }}</td>
+                                <td>{{ $childs }}</td>
                             </tr>
                             <tr>
                                 <th scope="row">Mensaje:</th>
-                                <td>{{ $datos['mensaje'] }}</td>
+                                <td>{{ $mensaje }}</td>
                             </tr>
                         </tbody>
                     </table>

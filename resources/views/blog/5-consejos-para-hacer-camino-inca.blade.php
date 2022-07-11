@@ -32,7 +32,8 @@
                 <div class="col-lg-12">
                     <div class="details">
                         <div class="location">
-                            <p><a href="/">Inicio</a> / <a href="../blog-peru">Blog</a> / <a>5 Consejos antes de hacer
+                            <p><a href="/">Inicio</a> / <a href="../blog-peru">Blog</a> / <a>5 Consejos antes de
+                                    hacer
                                     el Camino Inca</a></p>
                         </div>
                     </div>
@@ -40,7 +41,8 @@
                 <div class="col-lg-8">
                     <h2 class="text-center">Consejos para realizar el camno Inca</h2>
                     <img src="{{ asset('img/blog/phuyupatamarca-camino-inca-tour-tierras-vivas.webp') }}"
-                        alt="5 consejos para hacer camino inca" loading="lazy" width="100%"><span>Sitio arqueológico de
+                        alt="5 consejos para hacer camino inca" loading="lazy" width="100%"><span>Sitio arqueológico
+                        de
                         Phuyupatamarca, Camino Inca</span><br><br>
 
                     <p class="p-salkantay">
@@ -73,8 +75,8 @@
                             <div class="col-lg-4">
                                 <a href="">
                                     <img class="img-fluid"
-                                        src="{{ asset('img/thumb/Camino-Inca-2-Dias-Tierras-Vivas.webp') }}" alt=""
-                                        loading="lazy">
+                                        src="{{ asset('img/thumb/Camino-Inca-2-Dias-Tierras-Vivas.webp') }}"
+                                        alt="" loading="lazy">
                                 </a>
                             </div>
                             <div class="col-lg-8">
@@ -146,14 +148,16 @@
                     <div class="sharethis-inline-share-buttons"></div>
                     <div id="fb-root"></div>
                     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v13.0"
-                                        nonce="goeGVUvy"></script>
+                        nonce="goeGVUvy"></script>
                     <div class="fb-comments"
                         data-href="https://www.tierrasvivas.net/blog/5-consejos-para-hacer-camino-inca"
                         data-width="100%" data-numposts="5"></div>
                     <!-- ShareThis END -->
                 </div>
                 <div class="col-lg-4">
-                    @include('layouts.tours-similares')
+                    <div class="sticky">
+                        @include('layouts.tours-similares')
+                    </div>
                 </div>
                 <div class="space"></div>
                 <div class="col-lg-12">
@@ -235,7 +239,8 @@
                 perdida
                 de los Incas – <strong>Machu Picchu</strong></P>
             <P class="p-banner">
-                <a href="" class="a-reserva" data-toggle="modal" data-target="#exampleModal">¡Reserva ahora!</a>
+                <a href="" class="a-reserva" data-toggle="modal" data-target="#exampleModal">¡Reserva
+                    ahora!</a>
             </P>
         </div>
     </div>

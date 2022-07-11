@@ -718,7 +718,9 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    @include('layouts.tours-similares')
+                    <div class="sticky">
+                        @include('layouts.tours-similares')
+                    </div>
                 </div>
                 <div class="space"></div>
                 <div class="col-lg-12">

@@ -3,5 +3,6 @@
 <file name="book-index.blade.php" server="ftp.tierrasvivas.net" local="133012623581419661" remote="133016178600000000" Dst="0" />
 <file name="book.blade.php" server="ftp.tierrasvivas.net" local="133012624068207242" remote="133016178600000000" Dst="0" />
 <file name="popup.blade.php" server="ftp.tierrasvivas.net" local="133016100546344629" remote="133016178600000000" Dst="0" />
-<file name="reserva.blade.php" server="ftp.tierrasvivas.net" local="133012632006232441" remote="133016178600000000" Dst="0" />
+<file name="reserva.blade.php" server="ftp.tierrasvivas.net" local="133018458371043075" remote="133018540200000000" Dst="0" />
+<file name="emitir-reserva.blade.php" server="ftp.tierrasvivas.net" local="133017952036497058" remote="133020365400000000" Dst="0" />
 </dwsync>

@@ -5,6 +5,8 @@
     <!-- Required meta tags -->
     @include('layouts.estilos')
     <title>Travel Agency Tierras Vivas</title>
+    <meta property="og:image" content="https://tierrasvivas.net/img/galeria/camino-inca.png" />
+    <link rel="canonical" href="https://tierrasvivas.net/destinos/camino-inca-cantera-peru" />
 </head>
 
 <body>
@@ -66,7 +68,9 @@
                     <!-- ShareThis END -->
                 </div>
                 <div class="col-lg-4">
-                    @include('layouts.tours-similares')
+                    <div class="sticky">
+                        @include('layouts.tours-similares')
+                    </div>
                 </div>
                 <div class="space"></div>
                 <div class="col-lg-12">

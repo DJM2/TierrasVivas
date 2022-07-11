@@ -66,6 +66,25 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="card card-new" style="width: 18rem;">
+                        <a href="{{ route('comprar-tickets-machu-picchu') }}">
+                            <img class="card-img-top"
+                                src="{{ asset('img/blog/thumb/machu-picchu-vista-panoramica.webp') }}"
+                                alt="Runkurakay Perú" loading="lazy">
+                        </a>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Tickets a Machu Picchu 2022</h5>
+                            <i class="icon-calendar"></i> 09-07-2022<br><br>
+                            <p class="texto-blog">¿Quieres reservar y comprar tus Boletos Machu Picchu para el 2022 o
+                                2023? Consulta cómo obtener tus boletos Machu Picchu, existen 4 circuitos para recorrer
+                                la ciudadela Inca.
+                            </p>
+                            
+                            <a href="{{ route('comprar-tickets-machu-picchu') }}" class="boton-card">Más detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-new" style="width: 18rem;">
                         <a href="{{ route('chinchero') }}">
                             <img class="card-img-top"
                                 src="{{ asset('img/blog/thumb/pueblo-de-Chinchero-Cusco.webp') }}"
@@ -83,9 +102,8 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="card card-new" style="width: 18rem;">
                         <a href="blog/km-82-camino-inca">
-                            <img class="card-img-top"
-                                src="{{ asset('img/blog/thumb/camino-inca-km-82.webp') }}" alt="Card image cap"
-                                loading="lazy">
+                            <img class="card-img-top" src="{{ asset('img/blog/thumb/camino-inca-km-82.webp') }}"
+                                alt="Card image cap" loading="lazy">
                         </a>
                         <div class="card-body text-center">
                             <h5 class="card-title">Km 82 Camino inca</h5>
@@ -159,8 +177,8 @@
                     <div class="card card-new" style="width: 18rem;">
                         <a href="blog/turismo-mistico-en-cusco">
                             <img class="card-img-top"
-                                src="{{ asset('img/blog/thumb/Turismo-Mistico-en-Cusco.webp') }}" alt="Card image cap"
-                                loading="lazy">
+                                src="{{ asset('img/blog/thumb/Turismo-Mistico-en-Cusco.webp') }}"
+                                alt="Card image cap" loading="lazy">
                         </a>
                         <div class="card-body text-center">
                             <h5 class="card-title">Turismo Místico en Cusco</h5>
@@ -190,8 +208,8 @@
                     <div class="card card-new" style="width: 18rem;">
                         <a href="blog/14-atracciones-turisticas-en-cusco">
                             <img class="card-img-top"
-                                src="{{ asset('img/blog/Compania-de-Jesus-Cusco-Peru.webp') }}" alt="Card image cap"
-                                loading="lazy">
+                                src="{{ asset('img/blog/Compania-de-Jesus-Cusco-Peru.webp') }}"
+                                alt="Card image cap" loading="lazy">
                         </a>
                         <div class="card-body text-center">
                             <h5 class="card-title">14 Atracciones Turísticas Valoradas en Cusco</h5>

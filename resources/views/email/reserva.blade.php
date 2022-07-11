@@ -29,9 +29,10 @@
                 <div class="col-lg-12">
                     <div style="padding-top: 2em"></div>
                     <h2>Formulario de reserva para: {{ $titulo }}</h2>
-                    <h3>Precio: $<?php $precio = 250.0; echo $precio; ?></h3>
+                    <h3>Precio: $<?php $precio = 250.0;
+                    echo $precio; ?></h3>
                     <br>
-                    <form method="POST">
+                    <form method="POST" action="{{ route('reservas') }}">
                         @csrf
                         <div class="form-row">
                             <!----------Datos de Facturación------------->
@@ -305,17 +306,18 @@
                             </div>
                             <div class="form-group col-md-12">
                                 <label for="inputEmail4">Tour:</label>
-                                <input type="email" class="form-control" id="tour"
+                                <input type="email" name="tour" class="form-control" id="tour"
                                     value="{{ $titulo }}" readonly>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="inputPassword4">Fecha de inicio:</label>
-                                <input type="date" name="fi" class="form-control" id="inputPassword4">
+                                <input type="date" name="da" class="form-control" id="inputPassword4">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="inputAddress">Número de personas:</label>
                                 <div class="input-group mb-3">
-                                    <select class="custom-select" id="personas" onchange="cantidad();">
+                                    <select class="custom-select" name="numeroPersonas" id="personas"
+                                        onchange="cantidad();">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -336,7 +338,7 @@
 
                             <div class="form-group col-md-4">
                                 <label for="inputPassword4">Tipo de servicio:</label>
-                                <select class="custom-select">
+                                <select class="custom-select" name="tipoDeServicio">
                                     <option value="Grupo">En grupo</option>
                                     <option value="Privado">Privado</option>
                                 </select>
@@ -346,14 +348,12 @@
                             <div class="col-lg-12">
                                 <h3>Datos del grupo:</h3>
                                 <div id="elementos" class="form-row"></div>
-
                                 <script>
                                     function cantidad() {
+                                        document.getElementById("elementos").innerHTML = "";
                                         var pasajeros = document.getElementById('personas').value;
-                                        
                                         for (i = 0; i < pasajeros; i++) {
                                             n = i + 1;
-                                            div = document.createElement('div'); 
 
                                             div2 = document.createElement('div');
                                             div2.classList.add('form-group');
@@ -384,7 +384,6 @@
                                             div3.appendChild(input3);
 
                                             elementos = document.getElementById('elementos');
-                                            elementos.appendChild(div);
                                             elementos.appendChild(div2);
                                             elementos.appendChild(div3);
                                         }
@@ -394,62 +393,55 @@
                             <div class="espacio"></div>
 
                             <!----------Precio--------------->
-                            <div class="col-lg-12">
+
+                            <div class="form-group col-lg-12">
                                 <h3>Precios:</h3>
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Precio:</th>
-                                            <td id="precio" class="icon-dollar"> <?php echo $precio; ?></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">Porcentaje a pagar:</th>
-                                            <td>
-                                                <select class="custom-select" id="porcentaje"
-                                                    onchange="seleccionarPorcentaje();">
-                                                    <option value="0.2">20%</option>
-                                                    <option value="0.5">50%</option>
-                                                    <option value="100">100%</option>
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Método de pago:</th>
-                                            <td>
-                                                <select class="custom-select">
-                                                    <option value="Grupo">Visa</option>
-                                                    <option value="Privado">MasterCard</option>
-                                                    <option value="Privado">Transferencia Bancaria</option>
-                                                    <option value="Privado">Wester Union</option>
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Total:</th>
-                                            <td id="precioTotal">
-                                                <script>
-                                                    function seleccionarPorcentaje() {
-                                                        precio = document.getElementById('precio').innerHTML;
-                                                        porcentaje = document.getElementById('porcentaje').value;
-                                                        if (porcentaje == 100) {
-                                                            precioTotal = document.getElementById('precioTotal').innerText = '$' + precio;
-                                                        } else {
-                                                            sacandoPorcentaje = precio * porcentaje;
-                                                            precioTotal = document.getElementById('precioTotal').innerText = '$' + sacandoPorcentaje;
-                                                        }
-                                                    }
-                                                </script>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
                             </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputPassword4">Precio:</label>
+                                <input type="text" name="precio" class="form-control" id="precio"
+                                    value="<?php echo $precio; ?>" readOnly>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputPassword4">Porcentaje:</label>
+                                <select class="custom-select" id="porcentaje" onchange="seleccionarPorcentaje();"
+                                    name="porcentaje">
+                                    <option value="0.2">20%</option>
+                                    <option value="0.5">50%</option>
+                                    <option value="100">100%</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputPassword4">Método de pago:</label>
+                                <select class="custom-select" name="metodoPago">
+                                    <option value="Grupo">Visa</option>
+                                    <option value="Privado">MasterCard</option>
+                                    <option value="Privado">Transferencia Bancaria</option>
+                                    <option value="Privado">Wester Union</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="inputPassword4">Total de porcentaje a pagar:</label>
+                                <input type="text" id="precioTotal" name="precioTotal" class="form-control" readOnly>
+                            </div>
+                            <script>
+                                function seleccionarPorcentaje() {
+                                    precio = document.getElementById('precio').value;
+                                    porcentaje = document.getElementById('porcentaje').value;
+                                    if (porcentaje == 100) {
+                                        precioTotal = document.getElementById('precioTotal').value = '$' + precio + '.00';
+                                    } else {
+                                        sacandoPorcentaje = precio * porcentaje;
+                                        precioTotal = document.getElementById('precioTotal').value = '$' + sacandoPorcentaje+'.00';
+                                    }
+                                }
+                            </script>
                             <div class="form-group col-md-12">
                                 <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                                 <label class="form-check-label" for="defaultCheck1" required>
-                                    <a target="_blank" href="{{route('terminos')}}">He leído y estoy de acuerdo con los términos y condiciones</a>
+                                    <a target="_blank" href="{{ route('terminos') }}">He leído y estoy de acuerdo
+                                        con
+                                        los términos y condiciones</a>
                                 </label>
                             </div>
                         </div>

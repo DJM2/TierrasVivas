@@ -48,6 +48,13 @@
     color: #0d8c79;
 }
 
+.form-blog {
+    background: #364757;
+    color: #fff;
+    padding: 1px 1px;
+    border-radius: 5px;
+}
+
 .btn-whatsapp {
     display: block;
     width: 70px;
@@ -375,6 +382,12 @@ h3 {
     overflow: hidden;
 }
 
+.oscuro p {
+    color: #fff;
+    font-size: 13px;
+    padding: 12px 20px;
+}
+
 .uno:hover .oscuro {
     background: #00000087;
     transition: 1s;
@@ -503,6 +516,7 @@ h3 {
 .card-new:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.6s;
+    z-index: 10;
 }
 
 .boton-card {

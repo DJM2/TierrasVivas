@@ -21,7 +21,7 @@ Route::get('/', function () {return view('index');});
 Route::get('destinos-peru', function () {return view('destinos-peru');});
 Route::get('tours-de-aventura-peru', function () {return view('tours-de-aventura-peru');});
 Route::get('tours-imperdibles-en-peru', function () {return view('tours-imperdibles-en-peru');})->name('imperdibles');
-Route::get('tours-machu-picchu', function () {return view('tours-machu-picchu');});
+Route::get('tours-machu-picchu', function () {return view('tours-machu-picchu');})->name('tours-machu-picchu');
 Route::get('paquetes-turisticos-peru', function () {return view('paquetes-turisticos-peru');});
 Route::get('blog-peru', function () {return view('blog-peru');});
 Route::get('terminos-y-condiciones', function () {return view('terminos-y-condiciones');})->name('terminos');
@@ -51,7 +51,7 @@ Route::get('aventura/camino-inca-campamento-2-dias', function () {return view('a
 Route::get('aventura/camino-inca-corto-2-dias', function () {return view('aventura/camino-inca-corto-2-dias');});
 Route::get('aventura/camino-inca-4-dias', function () {return view('aventura/camino-inca-4-dias');})->name('camino-inca-4-dias');
 Route::get('aventura/huchuy-qosqo-a-machu-picchu', function () {return view('aventura/huchuy-qosqo-a-machu-picchu');});
-Route::get('aventura/inca-jungle-a-machu-picchu', function () {return view('aventura/inca-jungle-a-machu-picchu');});
+Route::get('aventura/inca-jungle-a-machu-picchu', function () {return view('aventura/inca-jungle-a-machu-picchu');})->name('inca-jungle-machu-picchu');
 Route::get('aventura/lares-trek-machu-picchu', function () {return view('aventura/lares-trek-machu-picchu');});
 Route::get('aventura/salkantay-trek-a-machu-picchu-4-dias', function () {return view('aventura/salkantay-trek-a-machu-picchu-4-dias');});
 Route::get('aventura/salkantay-trek-a-machu-picchu-5-dias', function () {return view('aventura/salkantay-trek-a-machu-picchu-5-dias');})->name('salkantay-5-dias');
@@ -68,7 +68,7 @@ Route::get('imperdibles/tour-al-valle-sagrado-peru', function () {return view('i
 Route::get('machupicchu/tour-a-machu-picchu-1-dia', function () {return view('machupicchu/tour-a-machu-picchu-1-dia');});
 Route::get('machupicchu/tour-machu-picchu-2-dias', function () {return view('machupicchu/tour-machu-picchu-2-dias');});
 Route::get('machupicchu/machu-picchu-en-carro-2-dias', function () {return view('machupicchu/machu-picchu-en-carro-2-dias');});
-Route::get('machupicchu/valle-sagrado-a-machu-picchu', function () {return view('machupicchu/valle-sagrado-a-machu-picchu');});
+Route::get('machupicchu/valle-sagrado-a-machu-picchu', function () {return view('machupicchu/valle-sagrado-a-machu-picchu');})->name('valle-sagrado-machu-picchu');
 
 /*Paquetes Perú*/
 Route::get('paquetes/peru-aventurero-11-dias', function () {return view('paquetes/peru-aventurero-11-dias');})->name('peru-aventurero');
@@ -90,6 +90,7 @@ Route::get('blog/consejos-de-viaje-a-machu-picchu', function () {return view('bl
 Route::get('blog/coronavirus-cierre-de-machu-picchu', function () {return view('blog/coronavirus-cierre-de-machu-picchu');});
 Route::get('blog/km-82-camino-inca', function () {return view('blog/km-82-camino-inca');});
 Route::get('blog/chinchero-cusco', function () {return view('blog/chinchero-cusco');})->name('chinchero');
+Route::get('blog/como-comprar-tickets-a-machu-picchu', function () {return view('blog/como-comprar-tickets-a-machu-picchu');})->name('comprar-tickets-machu-picchu');
 
 
 /*Reservar*/
@@ -127,3 +128,15 @@ Route::post('mensaje-popup', function(){
     });
     return back()->with('flash', 'Su mensaje fué enviado correctamente!');
 })->name('mensaje-popup');
+
+
+//Reservas:
+Route::post('reservas', function(){ 
+    $datos=request()->all();
+    Mail::send("email.emitir-reserva", $datos, function($message) use($datos){
+        $message->from($datos['email'], $datos['nombre'])
+        ->to('mirandadjmdjm@gmail.com', 'DJM2')
+        ->subject('Envio de formulario desde la página web.');
+    });
+    return back()->with('flash', 'Su mensaje fué enviado correctamente!');
+})->name('reservas');

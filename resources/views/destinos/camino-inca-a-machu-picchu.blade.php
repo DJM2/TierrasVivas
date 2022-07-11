@@ -11,7 +11,7 @@
         content="El Camino Inca es la ruta mas popular a Machu Picchu. La caminata comienza en el Km 82 – Piscacucho, conocido mas como Camino Inca 4 días 3 noches" />
     <meta name="keywords"
         content="Machu Picchu, camino inca, machu picchu por el camino inca, reservar camino inca, camino inca a machu picchu, viajar por camino inca" />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="https://tierrasvivas.net/img/galeria/camino-inca-a-machu-picchu.webp" />
     <link rel="canonical" href="https://tierrasvivas.net/destinos/camino-inca-a-machu-picchu" />
 </head>
 
@@ -106,10 +106,6 @@
                     amanecer, con el sol entrando y saliendo alternativamente, las nubes a veces oscurecen el
                     ruinas, a veces dejándolas despejadas.
                     </p>
-
-
-
-
                     <!-- ShareThis BEGIN -->
                     <h3 class="text-center">Compartir</h3>
                     <div class="sharethis-inline-share-buttons"></div>
@@ -121,7 +117,9 @@
                     <!-- ShareThis END -->
                 </div>
                 <div class="col-lg-4">
-                    @include('layouts.tours-similares')
+                    <div class="sticky">
+                        @include('layouts.tours-similares')
+                    </div>
                 </div>
                 <div class="space"></div>
                 <div class="col-lg-12">

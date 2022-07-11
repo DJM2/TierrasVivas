@@ -16,12 +16,10 @@
 <body>
     @include('layouts.menu')
     <div class="hero">
-        <!---- formulario
-            ----------------->
+        <!---- formulario----------------->
         <div class="container">
             <div class="row">
                 <div class="col-12 mx-auto">
-
                     @if (session()->has('flash'))
                         <div id="alerta"
                             style="margin-top: 20em; position:fixed; x-index:99; width:70%; text-align:center">
@@ -35,7 +33,7 @@
                     <form class="form-index" method="POST" action="{{ route('mensaje-index') }}">
                         @csrf
 
-                        <h3 class="h1-index-book">Book your trip to Perú!</h3>
+                        <h3 class="h1-index-book">¡Reserva tu viaje a Perú!</h3>
                         <div class="form-row">
                             <div class="form-group col-md-2">
                                 <input type="email" class="form-control" name="email" id="email"

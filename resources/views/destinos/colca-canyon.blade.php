@@ -9,7 +9,7 @@
         content="Alcanza una profundidad de 3.400 m, 62 millas (100 km) de largo. El Cañón del Colca se encuentra entre uno de los cañones más profundos del mundo." />
     <meta name="keywords"
         content="cañon del colca, colca canyon, arequipa tour, reservar arequipa, tour a mirador de condores, mirador de condor, mirador de condores, condores view" />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="https://tierrasvivas.net/img/galeria/mirador-de-los-condores-arequipa.webp" />
     <link rel="canonical" href="https://tierrasvivas.net/destinos/colca-canyon-tour-peru" />
 </head>
 
@@ -114,7 +114,9 @@
                     <!-- ShareThis END -->
                 </div>
                 <div class="col-lg-4">
-                    @include('layouts.tours-similares')
+                    <div class="sticky">
+                        @include('layouts.tours-similares')
+                    </div>
                 </div>
                 <div class="space"></div>
                 <div class="col-lg-12">
